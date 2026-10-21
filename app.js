@@ -1,12 +1,8 @@
-/**
- * Gezi Rehberi - Uygulama Mantığı & Render Katmanı
- */
 document.addEventListener("DOMContentLoaded", () => {
     if (typeof SPOT_DATA === "undefined") {
         console.error("Hata: SPOT_DATA bulunamadı. Lütfen data.js dosyasını kontrol edin.");
         return;
     }
-
     renderTheme();
     renderNavigation();
     renderHero();
@@ -34,10 +30,8 @@ function renderNavigation() {
 function renderHero() {
     document.getElementById("hero-bg").src = SPOT_DATA.hero.coverImage;
     document.getElementById("hero-bg").alt = SPOT_DATA.title;
-
     document.querySelector("#badge-category span").textContent = SPOT_DATA.category;
     document.querySelector("#badge-honor span").textContent = SPOT_DATA.hero.badge;
-
     document.getElementById("hero-title").textContent = SPOT_DATA.title;
     document.getElementById("hero-subtitle").textContent = SPOT_DATA.subtitle;
 
@@ -65,7 +59,6 @@ function renderVenueSummary() {
 
 function renderOverview() {
     document.querySelector("#overview-title span:last-child").textContent = SPOT_DATA.overview.title;
-
     const paragraphsContainer = document.getElementById("overview-paragraphs");
     paragraphsContainer.innerHTML = SPOT_DATA.overview.paragraphs.map(p => `<p>${p}</p>`).join("");
 
@@ -96,7 +89,6 @@ function renderWhyVisit() {
 
 function renderMustSee() {
     document.querySelector("#must-see-title span").textContent = SPOT_DATA.mustSee.title;
-
     const itemsContainer = document.getElementById("must-see-items");
     itemsContainer.innerHTML = SPOT_DATA.mustSee.items.map(item => `
         <div class="bg-white p-5 rounded-xl border border-slate-200/80 shadow-xs">
@@ -109,7 +101,6 @@ function renderMustSee() {
 
 function renderTransportation() {
     document.querySelector("#transport-title span").textContent = SPOT_DATA.transportation.title;
-
     const methodsContainer = document.getElementById("transport-methods");
     methodsContainer.innerHTML = SPOT_DATA.transportation.methods.map(method => `
         <div class="flex items-start space-x-3">
@@ -128,7 +119,6 @@ function renderTransportation() {
 
 function renderWhereToStay() {
     document.querySelector("#where-to-stay-title span").textContent = SPOT_DATA.whereToStay.title;
-
     const hotelContainer = document.getElementById("hotel-list");
     hotelContainer.innerHTML = SPOT_DATA.whereToStay.hotels.map(hotel => `
         <div class="bg-white p-4 rounded-2xl border border-slate-200 shadow-xs flex items-center justify-between">
@@ -137,7 +127,7 @@ function renderWhereToStay() {
                 <h4 class="font-bold text-slate-900 text-base">${hotel.name}</h4>
                 <p class="text-xs text-slate-500"><i class="fa-solid fa-location-dot mr-1"></i> ${hotel.distance}</p>
             </div>
-            <a href="${hotel.link}" class="px-4 py-2 bg-theme-light hover:bg-theme hover:text-white text-theme rounded-xl text-xs font-semibold transition-colors">
+            <a href="${hotel.link}" target="_blank" rel="noopener" class="px-4 py-2 bg-theme-light hover:bg-theme hover:text-white text-theme rounded-xl text-xs font-semibold transition-colors">
                 Otele Bak
             </a>
         </div>
@@ -146,7 +136,6 @@ function renderWhereToStay() {
 
 function renderWhereToEat() {
     document.querySelector("#where-to-eat-title span").textContent = SPOT_DATA.whereToEat.title;
-
     const restaurantContainer = document.getElementById("restaurant-list");
     restaurantContainer.innerHTML = SPOT_DATA.whereToEat.restaurants.map(rest => `
         <div class="bg-white p-4 rounded-2xl border border-slate-200 shadow-xs flex items-center justify-between">
@@ -166,7 +155,6 @@ function setupEventListeners() {
     document.getElementById("btn-favorite").addEventListener("click", () => {
         alert(`${SPOT_DATA.title} favorilere eklendi!`);
     });
-
     document.getElementById("btn-share").addEventListener("click", () => {
         if (navigator.clipboard) {
             navigator.clipboard.writeText(window.location.href);
