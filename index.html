@@ -40,13 +40,16 @@
 <body class="bg-slate-50 text-slate-800 font-['Inter',sans-serif]">
     <header class="sticky top-0 z-50 bg-white/90 backdrop-blur-md border-b border-slate-200 shadow-sm">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between">
-            <nav class="flex" aria-label="Breadcrumb">
-                <ol class="inline-flex items-center space-x-1 md:space-x-3 text-sm text-slate-600">
-                    <li class="inline-flex items-center"><a href="#" id="breadcrumb-prev" class="hover:text-amber-800 transition-colors">İstanbul</a></li>
-                    <li><div class="flex items-center"><i class="fa-solid fa-chevron-right text-xs text-slate-400 mx-2"></i><a href="#" id="breadcrumb-home" class="hover:text-amber-800 transition-colors">Tarihi Camiler</a></div></li>
-                    <li aria-current="page"><div class="flex items-center"><i class="fa-solid fa-chevron-right text-xs text-slate-400 mx-2"></i><span id="breadcrumb-current" class="text-slate-400 font-medium">Ayasofya Camii</span></div></li>
-                </ol>
-            </nav>
+            <div class="flex items-center space-x-3">
+                <button onclick="window.history.back()" class="flex items-center space-x-2 px-3.5 py-1.5 rounded-full bg-slate-100 hover:bg-slate-200 text-slate-700 transition-colors text-sm font-medium">
+                    <i class="fa-solid fa-arrow-left text-xs"></i>
+                    <span>Geri Dön</span>
+                </button>
+                <a href="https://dogamanzara243-hue.github.io/gezi-rotasi/" class="flex items-center space-x-2 px-3.5 py-1.5 rounded-full bg-amber-800 hover:bg-amber-900 text-white transition-colors text-sm font-medium shadow-sm">
+                    <i class="fa-solid fa-house text-xs"></i>
+                    <span>Ana Sayfa</span>
+                </a>
+            </div>
             <div class="flex items-center space-x-3">
                 <button id="favorite-btn" class="flex items-center space-x-1.5 px-3 py-1.5 rounded-full border border-slate-300 text-slate-700 hover:bg-slate-100 transition-colors text-sm font-medium"><i class="fa-regular fa-heart text-red-500"></i><span>Favorilere Ekle</span></button>
                 <button id="share-btn" class="flex items-center space-x-1.5 px-3 py-1.5 rounded-full border border-slate-300 text-slate-700 hover:bg-slate-100 transition-colors text-sm font-medium"><i class="fa-solid fa-share-nodes text-amber-800"></i><span>Paylaş</span></button>
