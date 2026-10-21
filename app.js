@@ -4,9 +4,6 @@ document.addEventListener("DOMContentLoaded", () => {
 });
 function renderTheme() { document.body.className = `bg-slate-50 text-slate-800 font-['Inter',sans-serif] theme-${SPOT_DATA.theme || 'history'}`; }
 function renderHero() {
-    document.getElementById("breadcrumb-prev").textContent = SPOT_DATA.breadcrumb.prev;
-    document.getElementById("breadcrumb-home").textContent = SPOT_DATA.breadcrumb.home;
-    document.getElementById("breadcrumb-current").textContent = SPOT_DATA.breadcrumb.current;
     document.getElementById("hero-cover").src = SPOT_DATA.hero.coverImage;
     document.getElementById("hero-category").textContent = SPOT_DATA.hero.category;
     document.getElementById("hero-badge").textContent = SPOT_DATA.hero.badge;
