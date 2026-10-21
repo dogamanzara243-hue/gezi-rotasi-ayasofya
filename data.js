@@ -1,8 +1,7 @@
 const SPOT_DATA = {
     theme: "history",
-    breadcrumb: { prev: "İstanbul", home: "Tarihi Camiler", current: "Ayasofya Camii" },
     hero: {
-        coverImage: "https://images.unsplash.com/photo-1568832359672-e36cf5d74f54?auto=format&fit=crop&w=1600&q=80",
+        coverImage: "https://images.unsplash.com/photo-1541432901042-2d8bd64b3a9b?auto=format&fit=crop&w=1600&q=80",
         category: "Tarihi Cami & Mimari Şaheser",
         badge: "UNESCO Dünya Mirası",
         title: "Ayasofya-i Kebir Cami-i Şerifi",
@@ -41,8 +40,8 @@ const SPOT_DATA = {
         { icon: "fa-solid fa-scroll", title: "Medeniyetlerin Sentezi", description: "İslam hat sanatı ile Doğu Roma mozaiklerinin aynı çatı altında bin yılı aşkın uyumuna tanıklık edin." }
     ],
     mustSee: [
-        { image: "https://images.unsplash.com/photo-1568832359672-e36cf5d74f54?auto=format&fit=crop&w=600&q=80", title: "Ana Kubbe ve Pandantifler", description: "Dört büyük melek (Seraphim) tasviri ile desteklenen muhteşem merkez kubbe." },
-        { image: "https://images.unsplash.com/photo-1541432901042-2d8bd64b3a9b?auto=format&fit=crop&w=600&q=80", title: "Mihrap ve Minber", description: "Osmanlı mermer işçiliğinin en zarif örneklerinden olan altın varaklı mihrap." },
+        { image: "https://images.unsplash.com/photo-1541432901042-2d8bd64b3a9b?auto=format&fit=crop&w=600&q=80", title: "Ana Kubbe ve Işık Pencereleri", description: "40 pencereli kasnak yapısıyla gökyüzünü içeri taşıyan ikonik kubbe." },
+        { image: "https://images.unsplash.com/photo-1568832359672-e36cf5d74f54?auto=format&fit=crop&w=600&q=80", title: "Mihrap ve Altın Varak İşlemeler", description: "Osmanlı mermer işçiliğinin en zarif örneklerinden olan görkemli mihrap." },
         { image: "https://images.unsplash.com/photo-1524231757912-21f4fe3a7200?auto=format&fit=crop&w=600&q=80", title: "Dev Hat Levhaları", description: "7.5 metre çapındaki ahşap üzerine altın yaldızlı tarihi hattat panoları." },
         { image: "https://images.unsplash.com/photo-1527838832766-51d7f37c9fd9?auto=format&fit=crop&w=600&q=80", title: "Sultan Mahmut Kütüphanesi", description: "Cami içerisine 18. yüzyılda eklenen barok ve klasik Osmanlı çini süslemeli kütüphane." }
     ],
