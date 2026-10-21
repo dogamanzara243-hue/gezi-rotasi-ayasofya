@@ -4,24 +4,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Gezilecek Yerler Detay</title>
-    
-    <!-- Tailwind CSS CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
-    
-    <!-- FontAwesome 6 Icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    
-    <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,600;0,700;1,400&display=swap" rel="stylesheet">
-    
-    <!-- Özel Stil Dosyası -->
     <link rel="stylesheet" href="style.css">
 </head>
 <body class="bg-slate-50 text-slate-800 font-sans antialiased selection:bg-indigo-500 selection:text-white">
-
-    <!-- ÜST NAVİGASYON & BREADCRUMB -->
     <header class="sticky top-0 z-50 bg-white/90 backdrop-blur-md border-b border-slate-200/80 shadow-xs transition-all">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between">
             <nav class="flex items-center space-x-2 sm:space-x-3 text-sm font-medium">
@@ -30,7 +20,7 @@
                     <span class="hidden sm:inline">Önceki Sayfa</span>
                 </a>
                 <span class="text-slate-300">/</span>
-                <a href="index.html" class="flex items-center text-slate-600 hover:text-theme transition-colors p-1.5 rounded-lg hover:bg-slate-100" title="Ana Sayfaya Dön">
+                <a href="https://dogamanzara243-hue.github.io/gezi-rotasi/" class="flex items-center text-slate-600 hover:text-theme transition-colors p-1.5 rounded-lg hover:bg-slate-100" title="Ana Sayfaya Dön">
                     <i class="fa-solid fa-house"></i>
                     <span class="ml-1.5 hidden md:inline">Ana Sayfa</span>
                 </a>
@@ -39,7 +29,6 @@
                 <span class="text-slate-300">/</span>
                 <span id="breadcrumb-title" class="text-theme-dark font-semibold truncate max-w-[140px] sm:max-w-none"></span>
             </nav>
-
             <div class="flex items-center space-x-1 sm:space-x-2">
                 <button id="btn-favorite" class="p-2 text-slate-500 hover:text-rose-500 hover:bg-rose-50 rounded-full transition-all" title="Favorilere Ekle">
                     <i class="fa-regular fa-heart text-lg"></i>
@@ -51,39 +40,31 @@
         </div>
     </header>
 
-    <!-- HERO BÖLÜMÜ -->
     <section class="relative bg-slate-900 text-white min-h-[520px] flex items-end">
         <div class="absolute inset-0 z-0">
             <img id="hero-bg" src="" alt="" class="w-full h-full object-cover">
             <div class="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-900/60 to-transparent"></div>
         </div>
-
         <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pb-12 pt-28 w-full">
             <div class="flex flex-wrap items-center gap-2 mb-4">
                 <span id="badge-category" class="inline-flex items-center px-3 py-1 rounded-full text-xs font-semibold bg-theme-badge text-white border border-white/20">
                     <i class="fa-solid fa-landmark mr-1.5"></i> <span></span>
                 </span>
-                <span id="badge-honor" class="inline-flex items-center px-3 py-1 rounded-full text-xs font-semibold bg-amber-500/90 backdrop-blur-md text-slate-950 border border-amber-300/30">
+                <span id="badge-honor" class="inline-flex items-center px-3 py-1 rounded-full text-xs font-semibold bg-amber-500/95 backdrop-blur-md text-slate-950 border border-amber-300/30">
                     <i class="fa-solid fa-award mr-1.5"></i> <span></span>
                 </span>
             </div>
-
             <h1 id="hero-title" class="text-3xl sm:text-5xl lg:text-6xl font-bold font-serif tracking-tight text-white mb-3"></h1>
             <p id="hero-subtitle" class="text-lg sm:text-xl text-slate-300 max-w-2xl font-light mb-8"></p>
-
             <div id="hero-stats" class="grid grid-cols-2 md:grid-cols-4 gap-4 p-4 rounded-2xl bg-white/10 backdrop-blur-md border border-white/15 max-w-4xl"></div>
         </div>
     </section>
 
-    <!-- ANA İÇERİK AKIŞI -->
     <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 space-y-12">
-
-        <!-- BU YAPI / ALAN NEDİR? -->
         <section id="venue-summary-box" class="bg-gradient-to-br text-white rounded-3xl p-6 sm:p-8 shadow-xl relative overflow-hidden">
             <div class="absolute -right-10 -bottom-10 opacity-10 text-white pointer-events-none">
                 <i class="fa-solid fa-monument text-[220px]"></i>
             </div>
-            
             <div class="relative z-10 max-w-3xl">
                 <div class="inline-flex items-center space-x-2 text-amber-400 text-sm font-semibold uppercase tracking-wider mb-2">
                     <i class="fa-solid fa-circle-info"></i>
@@ -91,12 +72,10 @@
                 </div>
                 <h2 id="summary-type-title" class="text-2xl sm:text-3xl font-serif font-bold mb-4 text-white"></h2>
                 <p id="summary-description" class="text-slate-300 text-base leading-relaxed mb-6 font-light"></p>
-                
                 <div id="summary-details" class="flex flex-wrap gap-3 text-xs font-medium pt-2 border-t border-white/10"></div>
             </div>
         </section>
 
-        <!-- DETAYLI REHBER & TARİHÇE -->
         <section class="grid grid-cols-1 lg:grid-cols-3 gap-8 items-start">
             <div class="lg:col-span-2 space-y-4">
                 <h2 id="overview-title" class="text-2xl sm:text-3xl font-serif font-bold text-slate-900 flex items-center gap-3">
@@ -105,7 +84,6 @@
                 </h2>
                 <div id="overview-paragraphs" class="prose prose-slate max-w-none text-slate-600 leading-relaxed text-lg space-y-4 font-normal"></div>
             </div>
-
             <div class="bg-white rounded-2xl p-6 border border-slate-200 shadow-xs space-y-4">
                 <h3 class="text-lg font-bold text-slate-900 flex items-center gap-2">
                     <i class="fa-solid fa-clock text-theme"></i> Ziyaret Notları
@@ -114,27 +92,22 @@
             </div>
         </section>
 
-        <!-- BU YERI NEDEN ZIYARET ETMELISINIZ? -->
         <section class="space-y-6">
             <div class="text-center max-w-2xl mx-auto">
                 <h2 id="why-visit-title" class="text-2xl sm:text-3xl font-serif font-bold text-slate-900"></h2>
                 <p id="why-visit-subtitle" class="text-slate-500 mt-2 text-sm"></p>
             </div>
-
             <div id="why-visit-cards" class="grid grid-cols-1 md:grid-cols-3 gap-6"></div>
         </section>
 
-        <!-- ÖNE ÇIKAN GÖRÜLMESİ GEREKEN DETAYLAR -->
         <section class="bg-slate-100/70 rounded-3xl p-6 sm:p-8 border border-slate-200/60 space-y-6">
             <h2 id="must-see-title" class="text-2xl sm:text-3xl font-serif font-bold text-slate-900 flex items-center gap-3">
                 <i class="fa-solid fa-star text-amber-500"></i>
                 <span></span>
             </h2>
-
             <div id="must-see-items" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4"></div>
         </section>
 
-        <!-- NASIL GİDİLİR? -->
         <section class="grid grid-cols-1 md:grid-cols-2 gap-8 items-stretch">
             <div class="bg-white p-6 sm:p-8 rounded-2xl border border-slate-200 shadow-xs flex flex-col justify-between">
                 <div>
@@ -144,7 +117,6 @@
                     </h2>
                     <div id="transport-methods" class="space-y-4 text-sm text-slate-600"></div>
                 </div>
-
                 <div class="mt-6 p-4 rounded-xl bg-amber-50 border border-amber-200 text-amber-900 text-xs leading-relaxed flex items-start space-x-3">
                     <i class="fa-solid fa-lightbulb text-amber-600 text-base mt-0.5"></i>
                     <div>
@@ -152,7 +124,6 @@
                     </div>
                 </div>
             </div>
-
             <div class="bg-slate-200 rounded-2xl min-h-[280px] relative overflow-hidden flex items-center justify-center border border-slate-300">
                 <img id="map-bg-img" src="" alt="Harita Önizleme" class="absolute inset-0 w-full h-full object-cover opacity-60">
                 <div class="relative z-10 text-center p-4">
@@ -164,7 +135,6 @@
             </div>
         </section>
 
-        <!-- NEREDE KALINIR? & YAKINLARDA NE YENİR? -->
         <section class="grid grid-cols-1 lg:grid-cols-2 gap-8">
             <div class="space-y-4">
                 <h2 id="where-to-stay-title" class="text-2xl font-serif font-bold text-slate-900 flex items-center gap-3">
@@ -173,7 +143,6 @@
                 </h2>
                 <div id="hotel-list" class="space-y-3"></div>
             </div>
-
             <div class="space-y-4">
                 <h2 id="where-to-eat-title" class="text-2xl font-serif font-bold text-slate-900 flex items-center gap-3">
                     <i class="fa-solid fa-utensils text-amber-600"></i>
@@ -182,17 +151,13 @@
                 <div id="restaurant-list" class="space-y-3"></div>
             </div>
         </section>
-
     </main>
 
-    <!-- FOOTER -->
     <footer class="bg-slate-900 text-slate-400 py-8 border-t border-slate-800 text-center text-sm mt-16">
         <div class="max-w-7xl mx-auto px-4">
             <p>© 2026 Akıllı Gezi Rehberi Projesi. GitHub Pages Uyumlu Modüler Şablon.</p>
         </div>
     </footer>
-
-    <!-- JavaScript Modülleri -->
     <script src="data.js"></script>
     <script src="app.js"></script>
 </body>
